@@ -22,5 +22,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Buildx
-        run: docker buildx build . -t vprokopiv/openvpn:arm64 --platform linux/arm64 --push
+        run: docker buildx build -f Dockerfile.aarch64 -t vprokopiv/openvpn:arm64 --platform linux/arm64 --push
     
